@@ -110,6 +110,9 @@
 					</div>
 				</div>
 			</tab>
+			<tab select="deleteDoc()">
+				<tab-heading>Delete Document</tab-heading>
+			</tab>
 		</tabset>
 	</div>
 </div>

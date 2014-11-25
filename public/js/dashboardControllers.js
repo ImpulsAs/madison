@@ -171,6 +171,12 @@ angular.module('madisonApp.dashboardControllers', [])
 
         return show;
       };
+
+      $scope.deleteDoc = function () {
+        if(confirm('Are you sure?')){
+          console.log('deleting.');
+        }
+      };
     }
     ])
   .controller('DashboardVerifyController', ['$scope', '$http',

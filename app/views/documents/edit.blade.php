@@ -124,6 +124,9 @@
 					<textarea rows="5" cols="80"/>{{ $doc->getEmbedCode() }}</textarea>
 				</div>
 			</tab>
+			<tab select="deleteDoc()">
+				<tab-heading>Delete Document</tab-heading>
+			</tab>
 		</tabset>
 	</div>
 </div>
