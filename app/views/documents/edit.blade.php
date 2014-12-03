@@ -78,6 +78,15 @@
 									<input type="hidden" ui-select2="categoryOptions" ng-model="categories" ng-change="categoriesChange(categories)" />
 								</div>
 							</div>
+							<div class="form-group">
+								<div class="col-sm-2">
+									<label for="intro-text">Intro Text:</label>
+								</div>
+								<div class="col-sm-10">
+									<textarea class="form-control" rows="10" ng-model="introtext" ng-change="updateIntroText(introtext)"></textarea>
+									<span class="help-block">Markdown Friendly.  Auto-saves 3 seconds after you're done editing.</span>
+								</div>
+							</div>
 						</form>
 					</div>
 					<div class="col-md-4 col-md-offset-1">

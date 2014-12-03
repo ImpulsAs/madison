@@ -49,6 +49,10 @@
 				<div class="doc-date" ng-repeat="date in doc.dates">
 					<strong>@{{ date.label }}: </strong><span>@{{ date.date | parseDate | date:'shortDate' }}</span>
 				</div>
+				<div class="doc-intro" ng-if="introtext">
+					<p><strong>Introduction:</strong></p>
+					<div class="markdown" data-ng-bind-html="introtext"></div>
+				</div>
 				<div class="btn-group">
 					<a id="doc-support" href="#" class="btn btn-default doc-support" ng-click="support(true, $event)" ng-class="{'btn-success': supported}">Support This Document</a>
 					<a id="doc-oppose" href="#" class="btn btn-default doc-oppose" ng-click="support(false, $event)" ng-class="{'btn-danger': opposed}">Oppose This Document</a>
