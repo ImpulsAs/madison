@@ -127,14 +127,27 @@
 			</tab>
 			<tab heading="Embed Document">
 				<div class="row">
+					<h2>Embed Document</h2>
 					<p>Simply paste the following code into a web page to embed the contents of this document into your website.</p>
 				</div>
 				<div class="row">
 					<textarea rows="5" cols="80"/>{{ $doc->getEmbedCode() }}</textarea>
 				</div>
 			</tab>
-			<tab select="deleteDoc()">
-				<tab-heading>Delete Document</tab-heading>
+			<tab heading="Document Settings">
+				<div class="row">
+					<h2>Document Settings</h2>
+					<div class="col-md-12">
+						<form>
+							<div class="form-group">
+								<label for="short-url" class="col-sm-2 control-label">Archive Document:</label>
+								<div class="col-sm-10">
+									<button class="btn btn-danger" ng-click="archiveDoc()">Archive</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
 			</tab>
 		</tabset>
 	</div>

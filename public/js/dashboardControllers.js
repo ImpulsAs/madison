@@ -171,12 +171,6 @@ angular.module('madisonApp.dashboardControllers', [])
 
         return show;
       };
-
-      $scope.deleteDoc = function () {
-        if(confirm('Are you sure?')){
-          console.log('deleting.');
-        }
-      };
     }
     ])
   .controller('DashboardVerifyController', ['$scope', '$http',
@@ -244,8 +238,8 @@ angular.module('madisonApp.dashboardControllers', [])
       };
     }
     ])
-  .controller('DashboardEditorController', ['$scope', '$http', '$timeout', '$location', '$filter', 'growl',
-    function ($scope, $http, $timeout, $location, $filter, growl) {
+  .controller('DashboardEditorController', ['$scope', '$http', '$timeout', '$location', '$filter', 'growl', '$window',
+    function ($scope, $http, $timeout, $location, $filter, growl, $window) {
       $scope.doc = {};
       $scope.sponsor = {};
       $scope.status = {};
@@ -394,6 +388,18 @@ angular.module('madisonApp.dashboardControllers', [])
               }
           });
         });
+      };
+
+      /**
+      * archiveDoc
+      *
+      * Deletes a document and all relationships (content, annotation, comments, etc).  We have soft-deletes set up so that the document can be un-deleted if necessary
+      */
+      $scope.archiveDoc = function () {
+        console.log("I'm trying to delete something.");
+        if($window.confirm('Are you sure?')){
+          console.log('deleting.');
+        }
       };
 
       /**
