@@ -4,6 +4,7 @@
  */
 class NoteMeta extends Eloquent{
 	protected $table = 'note_meta';
+  protected $softDelete = true;
 	
 	const TYPE_USER_ACTION = "user_action";
 	

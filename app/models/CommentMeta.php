@@ -4,6 +4,7 @@
  */
 class CommentMeta extends Eloquent{
 	protected $table = 'comment_meta';
+  protected $softDelete = true;
 	
 	const TYPE_USER_ACTION = "user_action";
 	
